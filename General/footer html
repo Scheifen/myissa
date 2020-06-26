@@ -1,0 +1,143 @@
+<script type="text/javascript" src="https://www.issa.com/wp-content/themes/issa/assets/js/extras.js?ver=5.1.1"></script>
+<script type="text/javascript" src="https://www.issa.com/wp-content/themes/issa/assets/js/scripts.js?ver=5.1.1"></script>
+<footer class="footer" style="clear:both">
+    <div class="row row-site" style="margin-left:auto;margin-right:auto;">
+        <div class="large-3 columns column-block">
+            <div class="address-block"><span class="tc-name">ISSA Headquarters</span>
+                <ul>
+                    <li class="tc-address">3300 Dundee Road</li>
+                    <li>Northbrook, IL 60062 USA</li>
+                    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                    <li class="tc-phone">Phone: 800-225-4772 (North America) or 847-982-0800</li>
+                    <li class="tc-fax">Fax: 847-982-1012</li>
+                    <li class="tc-email">Email: <a href="mailto:info@issa.com">info@issa.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="large-6 columns column-block">
+            <div class="row">
+                <div class="xlarge-10 columns xlarge-offset-2">
+                    <div class="footer-privacy hidden-print">
+                        <ul class="right-align">
+                            <li>&copy; 2020 ISSA.</li>
+                            <li><a href="https://www.issa.com/media/advertise">Advertise</a></li>
+                            <li class="divider">|</li>
+                            <li><a href="https://www.issa.com/copyright-notice">Copyright Notice</a></li>
+                            <li class="divider">|</li>
+                            <li><a href="https://www.issa.com/copyright-notice#disclaimer">Disclaimer</a></li>
+                            <li class="divider">|</li>
+                            <li><a href="https://www.issa.com/sitemap">Site Map</a></li>
+                            <li class="divider">|</li>
+                            <li><a href="https://www.issa.com/privacy-notice">Privacy Notice</a></li>
+                            <li class="divider">|</li>
+                            <li><a href="https://www.issa.com/wp-content/uploads/issa_video_sharing_policy_2010.pdf">Video Sharing Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-3 columns column-block"><a class="pull-right" href="/"> <img title="ISSA Advancing Clean. Driving Innovation." alt="ISSA Advancing Clean. Driving Innovation." src="https://www.issa.com/wp-content/uploads/footer-logotype.png"> </a></div>
+    </div>
+</footer>
+<script>
+function check_url() {
+    if (window.location.href.split("::", 1) == "https://online.issa.com/issassa/censsacustmast.insert_page" || window.location.href.split("::", 1) == "https://online.issa.com/issassa/f?p=STDSSA:101") {
+        $(".utility-links li:nth-of-type(1), .utility-links li:nth-of-type(4)").css({ "display": "none" });
+    };
+    if (window.location.href.split(".comp", 1) == "https://online.issa.com/issassa/censsacompanylkup") { $(".header").css({ "display": "none" }) };
+    if (window.location.href.search("15010") != "-1" && $("td[headers='ITEM_DESCR']").text() == "GBAC Fundamentals Online Course") { simpCheckout(); document.cookie="product_id=GBAC Fundamentals Online Course"; };
+    if (window.location.href.search("15010") != "-1" && country == 'CAN' && region == 'Canada') {$("#P15010_PAYMENT_TYPE option[value=08]").remove()};
+    if (window.location.href.search("15015") != "-1" && readCookie("product_id") == "GBAC Fundamentals Online Course") {gbacCourse()};
+    if (window.location.href.search("memssaord.wizstep") != "-1"){reStructure();};
+    if (window.location.href.search("ecssashop.show_search_results") != "-1"){rmHidden()};
+    if (window.location.href.search("ecssashop") != "-1"){categoryFix()};
+};
+$(window).load(check_url())
+</script>
+<script>
+$(window).load(
+    $("#aaSuperResponsiveContainer #ecssaContainer .aaECShopCategoryDisplay").css({ "width": "50%" }),
+    $("#ecssaContainer").css({ "background-color": "#fff", "padding": "10px" }),
+    $('.header .column').css({ "margin-left": "auto", "margin-right": "auto" }),
+    $(".aaSSAMenuLink").css("background-color", "rgb(72,103,118)"),
+    $("#ecssaContainer").css({ "background-color": "#fff", "padding": "10px" }))
+</script>
+<script>
+function check_navigation_display(el) {
+    //accepts a jQuery object of the containing div as a parameter
+    if ($(el).find('ul').children('li').first().is(':visible')) {
+        $(el).children('.prev').hide();
+    } else {
+        $(el).children('.prev').show();
+    }
+
+    if ($(el).find('ul').children('li').last().is(':visible')) {
+        $(el).children('.next').hide();
+    } else {
+        $(el).children('.next').show();
+    }
+};
+$('#aaECShopProductList').each(function TEST() {
+$(this).append('<a class="prev">prev</a> | <a class="next">next</a>');
+$(this).find('ul li:gt(9)').hide();
+
+check_navigation_display($(this));
+
+$(this).find('.next').click(function() {
+    var last = $(this).siblings('ul').children('li:visible:last');
+    last.nextAll(':li(10)').show();
+    last.next().nextAll().hide();
+    check_navigation_display($(this).closest('div'));
+});
+
+$(this).find('.prev').click(function() {
+    var first = $(this).siblings('ul').children('li:visible:first');
+    first.prevAll(':li(10)').show();
+    first.prev().prevAll().hide();
+    check_navigation_display($(this).closest('div'));
+});
+}));
+https: //online.issa.com/issassa/censsacompanylkup
+</script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,es,jv,ko,pt,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+}
+$("#aaARFullInvoices a").click(function() {
+    window.print();
+});
+$("#aaARFullInvoices a").removeAttr("href");
+</script>
+<script type="text/javascript">
+  
+function chartity_text() {
+    $(document).ready(function() {
+        if ($(".t-Report-cell[headers=ITEM_DESCR]").text() != "GBAC Fundamentals Online Course") {
+            $('#aaEcShoppingCartCustomDonateHdr').replaceWith("ISSA Charities aspires to be the Cleaning Industry’s very own charitable and philanthropic vehicle. Through our charitable programs, ISSA Charities works to advance women, diversity, equity, and inclusion in the cleaning industry, provides professional home cleaning for cancer patients, and offers scholarships to deserving students and interns.</br></br><a href='https://issacharities.org/'' target='_blank'>Learn more about ISSA charities</a>")
+        };
+        if ($(".t-Report-cell[headers=ITEM_DESCR]").text() === "GBAC Fundamentals Online Course") {
+            $("#aaECFundOptions").remove()
+        };
+    })
+};
+
+$(document).ready(chartity_text());
+</script>
+<script>
+x = $("#CB3").text().split(",");
+
+var arrayLength = x.length;
+
+function rmCBEinv2() {
+    if (window.location.pathname == "/issassa/arssainvpay.pay_page" && arrayLength > 1) {
+        for (var i = 0; i < arrayLength; i++) {
+            $("input[value=" + x[i] + "]").parent().parent().remove()
+        };
+    };
+};
+
+$(window).load(rmCBEinv2());
+$(window).load(courseCheckout());
+</script>

@@ -1,0 +1,446 @@
+<style><!--
+.my-profile-small{
+		color:white;
+		position: absolute;
+		bottom: 0px;
+		right:50px;
+
+}
+.title-main{
+		vertical-align: bottom;
+    	position: absolute;
+    	bottom: 0px;
+    	color: white;
+    	padding: 5px 10px;
+    	margin-bottom: auto;
+    	text-align: left;
+	}
+	.title-main-account-name{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:0px;
+    	font-size: 24px;
+	}
+	.title-main-company-name{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:40px;
+    	font-size: 14px;
+    	line-height: 14px;
+	}
+	.title-main-user-id{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:70px;
+    	font-size: 16px;
+	}
+	.title-main-company-id{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	// margin-left: 160px;
+    	top:70px;
+    	font-size: 16px;
+	}
+	.title-main-member-status{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:100px;
+    	font-size: 20px;
+	}
+	.specialized-content{
+		height:336px;
+		display:none;
+			}
+
+@media only screen and (max-width: 600px){
+
+.title-main-account-name{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:0px;
+    	font-size: 16px;
+	}
+	.title-main-company-name{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:40px;
+    	font-size: 11px;
+    	line-height: 11px;
+	}
+	.title-main-user-id{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:70px;
+    	font-size: 12px;
+	}
+	.title-main-company-id{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	// margin-left: 100px;
+    	top:70px;
+    	font-size: 12px;
+	}
+	.title-main-member-status{
+		vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	top:100px;
+    	font-size: 14px;
+	}
+.list-items{
+}
+.list-items h4{
+vertical-align:middle;
+position: relative;
+line-height:36px;
+}
+}
+
+.expire-issa{
+display:none;
+}
+#oli-box.hover{
+background-color: white;
+}
+
+@media only screen and (min-width: 1020px){
+#why-not-hide-me{
+    height: 0px !important;
+}
+}
+	.menu-box{
+		height:153px;
+	}
+	.container-menu-box{
+		margin-bottom: 30px;
+	}
+	.bg-standard{
+		background-color: #0072bc!important;
+		transition: .5s;
+	}
+	.bg-menu:hover{
+		background-color: #aeb1b4 !important;
+		transition: .5s;
+		cursor: pointer;
+	}
+	.menu-box-specialized{
+		height:336px;
+		background: url("https://go.issa.com/wp-content/uploads/2019/08/91.gif") no-repeat 50% center  !important;
+
+	}
+	.menu-box-banner{
+		height:153px;
+	}
+
+
+
+	
+	.tradeshows-box{
+		display: none;
+	}
+	.education-box{
+		display: none;
+	}
+	.advocacy-box{
+		display: none;
+	}
+	.advertising-box{
+		display: none;
+	}
+	.advertising-hidden-box{
+		display: none;
+	}
+	.issa-tv-box{
+		display: none;
+	}
+	.issa-divisions-box{
+		display: none;
+	}
+	.account-settings-box{
+		display: none;
+	}
+	.member-benefits-box{
+		display: none;
+	}
+	.membership-overview-box{
+		display: none;
+	}
+
+	.menu-box-benefits{
+		height: 703px;
+	}
+	.close-me{
+		content:url(https://go.issa.com/repository/myISSA/close.png);
+		width:20px;
+		position: absolute;
+		top:10px;
+		right:30px;
+		transition: .5s
+
+	}
+.member-key{
+		content:url(https://go.issa.com/wp-content/uploads/2019/09/member-key.png);
+		width:200px;
+		position: absolute;
+		bottom:10px;
+		right:30px;
+		transition: .5s;
+		display:none;
+
+	}
+
+	.close-me:hover{
+		opacity: .30;
+		transition: .5s;
+		cursor: pointer;
+
+	}
+
+	.list-items{
+		color:white;
+		border: white 1px solid;
+		display:none;
+			}
+.list-items h4{
+    color: white;
+    margin-bottom:0px;
+    vertical-align:middle;
+	position: relative;
+	line-height:36px;
+}
+.list-items h4 a{
+    color: white;
+    margin-bottom:0px;
+}
+.list-items h4:hover{
+    color: white;
+}
+	.list-items:hover{
+		color:white;
+		transition: .5s;
+		background:grey;
+	}
+	.spacer-40{
+		padding-top: 40px;
+	}
+
+	.icon-styler{
+		color:white; 
+		font-size:100px;
+		position:absolute;
+		text-align:right;
+		top:10px;
+		right:40px;
+		opacity:.50;
+	}
+	.icon-styler-inside{
+		color:white; 
+		font-size:100px;
+		position:absolute;
+		text-align:right;
+		bottom: 30px;
+		left:40px;
+		opacity:.50;
+	}
+   .iframe-container{
+   min-height: 153px;
+   background: url("https://go.issa.com/wp-content/uploads/2019/08/91.gif") no-repeat 50% center  !important;
+}
+	.notification-hider{
+		display: none;
+	}
+
+	.banner-issa{
+		display: none;
+	}
+	.banner-ieha{
+		display: none;
+	}
+	.banner-arcsi{
+		display: none;
+	}
+	.banner-emea{
+		display: none;
+	}
+
+@media only screen and (max-height: 770px){
+.menu-box-benefits{
+		height: 520px;
+	}
+.issa-tv-box .menu-box-benefits{
+		height: 700px;
+	}
+}
+span.issa_anchor, span.arcsi_anchor{
+    margin-left: 10px;
+font-size: 0.778rem;
+color:white;
+background-color:#79c532;
+    font-family: 'Raleway',sans-serif;
+padding: 10px;
+font-weight:700;
+cursor:pointer;
+padding-top: 12px;
+vertical-align: middle;
+}
+.issa_anchor:hover,.issa_anchor:focus, .arcsi_anchor:hover,.arcsi_anchor:focus {
+    background-color: #0063be;
+}
+--></style>
+<script>// <![CDATA[
+var company_member_type = $("#company_type").html();
+    var country = $("#country").html();
+    var membership = $("#membership_status").html();
+    var attending_tradeshow = $("#attending").html();
+    var expiring_membership = $("#expiringin30").html();
+$(".title-main-account-name").append(" " +user_name);
+$(".join_date").append(" " +join_date);
+$(".paid_thru_date").append(" " +paid_thru_date);
+$(".primary-contact").append(" " +primary_contact);
+$(".title-main-company-name").append(" " +company_name);
+// $(".title-main-user-id").append(" " +customer_id);
+$(".title-main-company-id").append(" " +employer_id);
+$(".title-main-member-status").append(" " +membership);
+$("#aaSTDDashboardStoredDocTen").remove();
+$(".header").css("z-index","1000");
+$("#aaSTDDashboardStoredDocNine").remove();
+// ]]></script>
+<script>// <![CDATA[
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+if (employer_id != null && employer_id != '' && employer_id.includes("<!") == false)  {
+setCookie("employer_id",employer_id,30)
+} else {
+	setCookie("employer_id","null",30)
+}
+
+if (customer_id != null && customer_id != '' && customer_id.includes("<!") == false){
+setCookie("customer_id",customer_id,30)
+} else {
+	setCookie("customer_id","null",30)
+}
+
+if (company_name != null && company_name != '' && company_name.includes("<!") == false){
+setCookie("company_name",company_name,30)
+} else {
+	setCookie("company_name","null",30)
+}
+
+if (company_type != null && company_type != '' && company_type.includes("<!") == false){
+setCookie("company_type",company_type,30)
+} else {
+	setCookie("company_type","null",30)
+}
+  
+if (user_job != null && user_job != '' && user_job.includes("<!") == false){
+setCookie("user_job",user_job,30)
+} else {
+	setCookie("user_job","null",30)
+}
+
+if (user_name != null && user_name != '' && user_name.includes("<!") == false){
+setCookie("user_name",user_name,30)
+} else {
+	setCookie("user_name","null",30)
+}
+
+if (user_email != null && user_email != '' && user_email.includes("<!") == false){
+setCookie("user_email",user_email,30)
+} else {
+	setCookie("user_email","null",30)
+}
+
+
+
+var cookie_val = getCookie("previousPage");
+if (cookie_val != null && cookie_val != ''){
+document.cookie = "previousPage= ; expires = Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=issa.com;";
+window.location.href = cookie_val;
+}
+
+
+var xmlhttp = new XMLHttpRequest();
+        var xmlhttp2 = new XMLHttpRequest();
+
+        var image_featured = "";
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("title_news").innerHTML = myObj[0].title.rendered;
+                var excerpt = myObj[0].excerpt.rendered;
+                document.getElementById("excerpt_news").innerHTML = excerpt.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
+				
+				if(typeof myObj[0]._links['wp:featuredmedia'] != 'undefined' && myObj[0]._links['wp:featuredmedia'] != null){
+				image_featured = myObj[0]._links['wp:featuredmedia'][0].href;
+				xmlhttp2.open("GET", image_featured, true);
+                xmlhttp2.send();
+				}else{
+					$("#featured_news").remove();
+					$(".featured_news").remove();
+					$('.news_column').addClass('col-md-12').removeClass('col-md-9');
+
+					
+				}
+
+            }
+        };
+        xmlhttp.open("GET", "https://www.issa.com/wp-json/wp/v2/posts?embed", true);
+        xmlhttp.send();
+
+        xmlhttp2.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj2 = JSON.parse(this.responseText);
+                document.getElementById("featured_news").src = myObj2.guid.rendered;
+
+            }
+        };
+// ]]></script>
+<style><!--
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'Font Awesome 5 Free' !important;
+}
+--></style>
