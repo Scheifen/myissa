@@ -2,7 +2,7 @@
 <script>
 
 function mustAccept(button) {
-    if (getCookie("eulaAccept") = 'Y') {
+    if (getCookie("eulaAccept") == 'Y') {
         $("#blanker").fadeIn()
     } else {
         if (button == 'consume') {
