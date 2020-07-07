@@ -1,3 +1,6 @@
+<script>
+    ajaxCall('https://raw.githubusercontent.com/Scheifen/myissa/master/SSA/calculatorEULA.html?token=ABHZXQ3Y5OMLA4AGKJMX6M27ATVQ6')
+</script>
 <div id="why-not-hide-me" class="center" style="height: 120px;"></div>
 <div class="container">
     <div class="row">
@@ -91,7 +94,7 @@
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
                                 <h4><a onclick="mustAccept('bidding')">Work Loading Bidding Tool</a></h4>
                             </div>
-                            <div>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
                                 <h4><a onclick="mustAccept('metric')">Work Loading and Bidding Tool - Metric</a></h4>
                             </div>
                             <div class="close-me"></div>
