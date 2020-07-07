@@ -15,7 +15,7 @@
 <li><a class="branding-name" href="https://online.issa.com/issassa/f?p=STDSSA:1000:8674429154377:::::">myISSA</a></li>
 <li><a href="https://online.issa.com/issassa/ecssashop.shopping_page">Shop</a></li>
 <li class="going-back"><a href="https://www.issa.com">Back To ISSA</a></li>
-<li class="going-back-logout"><a href="https://online.issa.com/issassa/ssalogout?p_url=https://www.issa.com">Logout</a><li>
+<li class="going-back-logout"><a href="https://login.issa.com/account/logout">Logout</a><li>
 </ul>
 
 <script>
@@ -30,7 +30,7 @@
 
 function loggedout(){
 setCookie("loggedout","yes",365);
-window.location.href = "https://online.issa.com/issassa/ssalogout?p_url=https://www.issa.com";
+window.location.href = "https://login.issa.com/account/logout";
 
 }
 

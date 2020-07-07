@@ -1,0 +1,37 @@
+<!-- script -->
+<script>
+$("#uBodyContainer").prepend($("#blanker"))
+
+function mustAccept(button) {
+    if (document.cookie.search("eulaAccept") == -1) {
+        $("#blanker").fadeIn()
+    } else {
+        if (button == 'consume') {
+            document.location = "https://calculators.issa.com/account/ISSACalCulator/1";
+        }
+        if (button == 'bidding') {
+            document.location = "https://calculators.issa.com/account/ISSACalCulator/0";
+        }
+        if (button == 'metric') {
+            document.location = "http://calculatorsmetric.issa.com/Metric/Locations";
+        }
+    }
+};
+
+function eulaAccepted() {
+    document.cookie = "eulaAccept=Y"
+    $("blanker").fadeOut()
+};
+
+function hideBlanker() {
+    $("#blanker").fadeOut();
+}
+</script>
+<!--html part -->
+<div id="blanker" style="position:absolute; z-index:99; background-color:#525252b3; width:100vw; height:100vh; display:none" onclick="hideBlanker()">
+    <div id="EULA" class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account" style="background-color:; width:50vw; height:25vh; margin-top:25vh; margin-left:auto; margin-right:auto; position:relative">
+        NOTICE: By using the ISSA Work Loading and Bidding Tool you acknowledge and consent to the following: The data and information entered by you will be aggregated and analyzed by ISSA for the purposes of extrapolating average estimated cleaning times for the purpose of setting workloading guidelines and benchmarking information as well as to identify evolving trends in cleaning regimens. All data and information will be aggregated and anonymized and only used for these purposes.<br>
+        <button style="background-color:white;color:#0072bc" onclick="eulaAccepted()">I Accept These Terms</button>
+    </div>
+</div>
+
