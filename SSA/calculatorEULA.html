@@ -2,7 +2,7 @@
 <script>
 
 function mustAccept(button) {
-    if (document.cookie.search("eulaAccept") == -1) {
+    if (getCookie("eulaAccept") = 'Y') {
         $("#blanker").fadeIn()
     } else {
         if (button == 'consume') {
@@ -29,7 +29,7 @@ function hideBlanker() {
 <!--html part -->
 <div id="blanker" style="position:absolute; z-index:99; background-color:#525252b3; width:100vw; height:140vh; display:none; overflow:hidden;" onclick="hideBlanker()">
     <div id="EULA" class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account" style="background-color:white; width:50vw; height:25vh; margin-top:25vh; margin-left:auto; margin-right:auto; position:relative; display:block; color:#0072bc!important; text-align: center; padding:10px;">
-        NOTICE: By using the ISSA Work Loading and Bidding Tool you acknowledge and consent to the following: The data and information entered by you will be aggregated and analyzed by ISSA for the purposes of extrapolating average estimated cleaning times for the purpose of setting workloading guidelines and benchmarking information as well as to identify evolving trends in cleaning regimens. All data and information will be aggregated and anonymized and only used for these purposes.<br><br>
+        NOTICE: By using the ISSA Calculator Tools you acknowledge and consent to the following: The data and information entered by you will be aggregated and analyzed by ISSA for the purposes of extrapolating average estimated cleaning times for the purpose of setting workloading guidelines and benchmarking information as well as to identify evolving trends in cleaning regimens. All data and information will be aggregated and anonymized and only used for these purposes.<br><br>
         <button style="background-color:white;color:#0072bc;border:3px;border-style: solid;" onclick="eulaAccepted()">I Accept These Terms</button>
     </div>
 </div>
