@@ -1,6 +1,5 @@
 <!-- script -->
 <script>
-$("#uBodyContainer").prepend($("#blanker"))
 
 function mustAccept(button) {
     if (document.cookie.search("eulaAccept") == -1) {
@@ -21,7 +20,7 @@ function mustAccept(button) {
 function eulaAccepted() {
     document.cookie = "eulaAccept=Y"
     $("blanker").fadeOut()
-};
+}
 
 function hideBlanker() {
     $("#blanker").fadeOut();
@@ -34,4 +33,3 @@ function hideBlanker() {
         <button style="background-color:white;color:#0072bc" onclick="eulaAccepted()">I Accept These Terms</button>
     </div>
 </div>
-
