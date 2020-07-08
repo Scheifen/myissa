@@ -1,5 +1,5 @@
 <script>
-    ajaxCall('https://raw.githubusercontent.com/Scheifen/myissa/master/SSA/calculatorEULA.html?token=ABHZXQ3Y5OMLA4AGKJMX6M27ATVQ6')
+    ajaxCall('/images/My_Images/ajaxfolder/calculatorEULA.html')
 </script>
 <div id="why-not-hide-me" class="center" style="height: 120px;"></div>
 <div class="container">
@@ -17,7 +17,6 @@
                     <div class="col-md-12 container-menu-box">
                         <div class="bg-standard  mr-md-1 menu-box-benefits">
                             <div class="spacer-40"></div>
-
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term admin-creds">
                                 <h4><a href="https://online.issa.com/issassa/censsacmpadmin.display_emp" class="myissa_account">myISSA User Accounts</a> <a href="https://online.issa.com/issassa/censsacmpadmin.display_emp" class="arcsi_account">myARCSI User Accounts</a></h4>
                             </div>
