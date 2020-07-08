@@ -3,29 +3,28 @@
 function mustAccept(button) {
     if (getCookie("eulaAccept") != 'Y') {
         $("#blanker").fadeIn()
-        {
         if (button == 'consume') {
-            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept(consume);");
+            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept('consume');")
         }
         if (button == 'bidding') {
-            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept(bidding);");
+            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept('bidding');")
         }
         if (button == 'metric') {
-            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept(metric);");
+            $("#acceptEula").attr("onclick","eulaAccepted();mustAccept('metric');")
         }
     } 
     else {
         if (button == 'consume') {
-            document.location = "https://calculators.issa.com/account/ISSACalCulator/1";
+            document.location = "https://calculators.issa.com/account/ISSACalCulator/1"
         }
         if (button == 'bidding') {
-            document.location = "https://calculators.issa.com/account/ISSACalCulator/0";
+            document.location = "https://calculators.issa.com/account/ISSACalCulator/0"
         }
         if (button == 'metric') {
-            document.location = "http://calculatorsmetric.issa.com/Metric/Locations";
+            document.location = "http://calculatorsmetric.issa.com/Metric/Locations"
         }
     }
-};
+}
 
 function eulaAccepted() {
     document.cookie = "eulaAccept=Y; path=/"
@@ -33,7 +32,7 @@ function eulaAccepted() {
 }
 
 function hideBlanker() {
-    $("#blanker").fadeOut();
+    $("#blanker").fadeOut()
 }
 </script>
 <!--html part -->
