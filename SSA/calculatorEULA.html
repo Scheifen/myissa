@@ -1,7 +1,6 @@
 <!-- script -->
 <script>
-
-function mustAccept(button) {
+function mustAccept(button, accept) {
     if (getCookie("eulaAccept") != 'Y') {
         $("#blanker").fadeIn()
     } else {
@@ -18,7 +17,7 @@ function mustAccept(button) {
 };
 
 function eulaAccepted() {
-    document.cookie = "eulaAccept=Y"
+    document.cookie = "eulaAccept=Y; path=/"
     $("blanker").fadeOut()
 }
 
@@ -27,9 +26,10 @@ function hideBlanker() {
 }
 </script>
 <!--html part -->
-<div id="blanker" style="position:absolute; z-index:99; background-color:#525252b3; width:100vw; height:140vh; display:none; overflow:hidden;" onclick="hideBlanker()">
-    <div id="EULA" class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account" style="background-color:white; width:50vw; height:25vh; margin-top:25vh; margin-left:auto; margin-right:auto; position:relative; display:block; color:#0072bc!important; text-align: center; padding:10px;">
+<div id="blanker" style="position:absolute; z-index:98; background-color:#525252b3; width:100vw; height:140vh; display:none; overflow:hidden;" onclick="hideBlanker()">
+    <div id="EULA" class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account" style="background-color:white; width:50vw; margin-top:25vh; margin-left:auto; margin-right:auto; position:relative; display:block; color:#0072bc!important; text-align: center; padding:10px; border:solid; border-width: thick;z-index:99">
         NOTICE: By using the ISSA Calculator Tools you acknowledge and consent to the following: The data and information entered by you will be aggregated and analyzed by ISSA for the purposes of extrapolating average estimated cleaning times for the purpose of setting workloading guidelines and benchmarking information as well as to identify evolving trends in cleaning regimens. All data and information will be aggregated and anonymized and only used for these purposes.<br><br>
-        <button style="background-color:white;color:#0072bc;border:3px;border-style: solid;" onclick="eulaAccepted()">I Accept These Terms</button>
+        <button style="background-color:white;color:#0072bc;border:3px;border-style:solid;height: 40px" onclick="eulaAccepted()">I Accept These Terms</button>
+        <button style="background-color:white;color:#0072bc;border:3px;border-style:solid;height: 40px" onclick="hideBlanker()">Go Back</button>
     </div>
 </div>
