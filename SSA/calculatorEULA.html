@@ -14,22 +14,18 @@ function mustAccept(button) {
         }
     } else {
         if (button == 'consume') {
-            document.location = "https://calculators.issa.com/account/ISSACalCulator/1"
+            window.open("https://calculators.issa.com/account/ISSACalCulator/1", "_blank")
         }
         if (button == 'bidding') {
-            document.location = "https://calculators.issa.com/account/ISSACalCulator/0"
+            window.open("https://calculators.issa.com/account/ISSACalCulator/0", "_blank")
         }
         if (button == 'metric') {
-<<<<<<< Updated upstream
-            document.location = "http://calculatorsmetric.issa.com/Metric/Locations"
-=======
             window.open("https://calculatorsmetric.issa.com/Metric/Locations", "_blank")
->>>>>>> Stashed changes
         }
     }
 }
 
-function eulaAccepted() {
+function eulaAccepted(button) {
     document.cookie = "eulaAccept=Y; path=/"
     $("blanker").fadeOut()
 }
