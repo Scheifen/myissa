@@ -1,250 +1,299 @@
 <div id="google_translate_element" style="bottom: 0px; position: fixed;"></div>
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
+// <![CDATA[
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 }
-// ]]></script>
+// ]]>
+</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-<script>// <![CDATA[
+<script>
+// <![CDATA[
 $('iframe a').attr('target', '_blank');
-    
-    $("#membership-overview").click(function(){
-        $(".membership-overview-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
+
+$("#membership-overview").click(function() {
+    $(".membership-overview-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
 
 
-    $("#member-benefits").click(function(){
-        $(".member-benefits-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#tradeshows").click(function(){
-        $(".tradeshows-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#education").click(function(){
-        $(".education-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#advocacy").click(function(){
-        $(".advocacy-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#advertising").click(function(){
-        $(".advertising-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#issa-tv").click(function(){
-        $(".issa-tv-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#divisions").click(function(){
-        $(".issa-divisions-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
-    $("#account-settings").click(function(){
-        $(".account-settings-box").fadeIn("slow");
-        $(".menu-box-container").hide();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-    });
+$("#member-benefits").click(function() {
+    $(".member-benefits-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#tradeshows").click(function() {
+    $(".tradeshows-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#education").click(function() {
+    $(".education-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#advocacy").click(function() {
+    $(".advocacy-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#advertising").click(function() {
+    $(".advertising-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#issa-tv").click(function() {
+    $(".issa-tv-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#divisions").click(function() {
+    $(".issa-divisions-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+$("#account-settings").click(function() {
+    $(".account-settings-box").fadeIn("slow");
+    $(".menu-box-container").hide();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
 
-    var company_member_type = $("#company_type").html();
-    var country = $("#country").html();
-    var region = $("#region").html();
-    var membership = $("#membership_status").html();
-    var attending_tradeshow = $("#attending").html();
-    var expiring_membership = $("#expiringin30").html();
+var company_member_type = $("#company_type").html();
+var country = $("#country").html();
+var region = $("#region").html();
+var membership = $("#membership_status").html();
+var attending_tradeshow = $("#attending").html();
+var expiring_membership = $("#expiringin30").html();
 
 if (expiring_membership == "EXPIRING" && membership_status != 'NONMEMBER') {
-        $(".expiring-membership").show();
-    }
-if (attending_tradeshow == "NOT_ATTENDING"){
-        $(".attending-show").show();
-    }
+    $(".expiring-membership").show();
+}
+if (attending_tradeshow == "NOT_ATTENDING") {
+    $(".attending-show").show();
+}
 
 
-if (membership == "ACTIVE" || membership == "PENDING"){
-    if (country == "USA"){
-      if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
+if (membership == "ACTIVE" || membership == "PENDING") {
+    if (country == "USA") {
+        if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
 
-        $(".banner-issa").show();
-        $(".manufacturer").show();
+            $(".banner-issa").show();
+            $(".manufacturer").show();
 
-    } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
+        } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
 
-       $(".banner-issa").show();
-        $(".distributor").show();
-      
-    } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
+            $(".banner-issa").show();
+            $(".distributor").show();
 
-       $(".banner-issa").show();
-        $(".manufacture-rep").show();
-      
-    } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--") ) {
+        } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
 
-       $(".banner-issa").show();
-        $(".bsc-isp").show();
-        $(".isp").show();
-       
-    } else {
-        $(".banner-issa").show();
-        $(".bsc-isp").show();
-        $(".other").show();
-    }
+            $(".banner-issa").show();
+            $(".manufacture-rep").show();
+
+        } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
+
+            $(".banner-issa").show();
+            $(".bsc-isp").show();
+            $(".isp").show();
+
+        } else {
+            $(".banner-issa").show();
+            $(".bsc-isp").show();
+            $(".other").show();
+        }
     } else {
         $(".banner-issa").show();
         $(".emea").show();
     }
-} else if (membership == "TERMINATED" || membership == "NONMEMBER" || membership == "SUSPENDED"){
-    if (country == "USA"){
-      if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
+    //Terminated or Suspended
+} else if (membership == "TERMINATED" || membership == "NONMEMBER" || membership == "SUSPENDED") {
+    if (country == "USA") {
+        if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
 
-        $(".expired-membership").show();
-        $(".manufacturer-term").show();
-        $(".manufacturer:not(.manufacturer-term) a").removeAttr("href");
-        $(".manufacturer:not(.manufacturer-term)").css("background-color","#aeb1b4");
-      
-    } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
+            $(".expired-membership").show();
+            $(".manufacturer-term").show();
+            $(".manufacturer:not(.manufacturer-term) a").removeAttr("href");
+            $(".manufacturer:not(.manufacturer-term)").css("background-color", "#aeb1b4");
 
-       $(".expired-membership").show();
-        $(".distributor-term").show();
-        $(".distributor").show();
-        $(".distributor:not(.distributor-term) a").removeAttr("href");
-        $(".distributor:not(.distributor-term)").css("background-color","#aeb1b4");
-      
-    } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
-       
-       $(".expired-membership").show();
-        $(".manufacture-rep-term").show();
-        $(".manufacture-rep:not(.manufacture-rep-term) a").removeAttr("href");
-        $(".manufacture-rep:not(.manufacture-rep-term)").css("background-color","#aeb1b4");
+        } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
 
-      
-    } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--") ) {
-       
-       $(".expired-membership").show();
-        $(".bsc-isp-term").show();
-        $(".isp").show();
-        $(".bsc-isp").show();
-        $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
-        $(".bsc-isp:not(.bsc-isp-term)").css("background-color","#aeb1b4");
+            $(".expired-membership").show();
+            $(".distributor-term").show();
+            $(".distributor").show();
+            $(".distributor:not(.distributor-term) a").removeAttr("href");
+            $(".distributor:not(.distributor-term)").css("background-color", "#aeb1b4");
 
-       
+        } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
+
+            $(".expired-membership").show();
+            $(".manufacture-rep-term").show();
+            $(".manufacture-rep:not(.manufacture-rep-term) a").removeAttr("href");
+            $(".manufacture-rep:not(.manufacture-rep-term)").css("background-color", "#aeb1b4");
+
+
+        } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
+
+            $(".expired-membership").show();
+            $(".bsc-isp-term").show();
+            $(".isp").show();
+            $(".bsc-isp").show();
+            $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
+            $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
+
+
+        } else {
+            $(".expired-membership").show();
+            $(".bsc-isp-term").show();
+            $(".other").show();
+            $(".bsc-isp").show();
+            $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
+            $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
+
+        }
     } else {
-        $(".expired-membership").show();
-        $(".bsc-isp-term").show();
-        $(".other").show();
-        $(".bsc-isp").show();
-        $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
-        $(".bsc-isp:not(.bsc-isp-term)").css("background-color","#aeb1b4");
-        
-    }
-    } else {
-        
+
         $(".expired-membership").show();
         $(".emea-term").show();
         $(".emea:not(.emea-term) a").removeAttr("href");
-        $(".emea:not(.emea-term)").css("background-color","#aeb1b4");
+        $(".emea:not(.emea-term)").css("background-color", "#aeb1b4");
+    }
+}
+//Nonmembers 
+else if (membership == "NONMEMBER") {
+    if (country == "USA") {
+        if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
+            $(".manufacturer-term").show();
+            $(".manufacturer:not(.manufacturer-term) a").removeAttr("href");
+            $(".manufacturer:not(.manufacturer-term)").css("background-color", "#aeb1b4");
+
+        } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
+
+            $(".distributor-term").show();
+            $(".distributor").show();
+            $(".distributor:not(.distributor-term) a").removeAttr("href");
+            $(".distributor:not(.distributor-term)").css("background-color", "#aeb1b4");
+
+        } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
+
+            $(".manufacture-rep-term").show();
+            $(".manufacture-rep:not(.manufacture-rep-term) a").removeAttr("href");
+            $(".manufacture-rep:not(.manufacture-rep-term)").css("background-color", "#aeb1b4");
+
+
+        } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
+
+            $(".bsc-isp-term").show();
+            $(".isp").show();
+            $(".bsc-isp").show();
+            $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
+            $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
+
+
+        } else {
+            $(".bsc-isp-term").show();
+            $(".other").show();
+            $(".bsc-isp").show();
+            $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
+            $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
+
+        }
+    } else {
+        $(".emea-term").show();
+        $(".emea:not(.emea-term) a").removeAttr("href");
+        $(".emea:not(.emea-term)").css("background-color", "#aeb1b4");
     }
 }
 
 
 if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP") {
-       
-        $(".bsc").show();
-       
-    } 
+
+    $(".bsc").show();
+
+}
 if (company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC") {
-       
-        $(".isp").show();
-       
-    }
+
+    $(".isp").show();
+
+}
 
 if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
-              $('.advertising-hidden-box').show();   
-        }    
-
-    $(".close-me").click(function(){
-        
-      if ( $('.membership-overview-box').css('display') == 'block' ) {
-      $(".membership-overview-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-
-      if ( $('.member-benefits-box').css('display') == 'block' ) {
-      $(".member-benefits-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if ( $('.tradeshows-box').css('display') === 'block' ) {
-      $(".tradeshows-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if ( $('.education-box').css('display') == 'block' ) {
-      $(".education-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if ( $('.advocacy-box').css('display') == 'block' ) {
-      $(".advocacy-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
-            if ( $('.advertising-box').css('display') == 'block' ) {
-            $(".advertising-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-            }
-        }
-        
-        if ( $('.issa-tv-box').css('display') == 'block' ) {
-      $(".issa-tv-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if ( $('.issa-divisions-box').css('display') == 'block' ) {
-      $(".issa-divisions-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        if ( $('.account-settings-box').css('display') == 'block' ) {
-      $(".account-settings-box").animate({height:'hide'}).promise().done(function(){$(".menu-box-container").fadeIn("slow"); });
-        }
-        
-    });
-
-if (membership == "ACTIVE" || membership == "PENDING"){
-
-$(".title-main-member-status").css("color","rgb(130, 255, 130)");
-if (expiringin30 == "EXPIRING"){
-$(".banner-active").hide();
-$(".banner-arcsi").hide();
-$(".banner-issa").show();
-$(".banner-ieha").hide();
- if (country != "USA"){
-     $(".banner-active").hide();
-    $(".banner-arcsi").hide();
-    $(".banner-issa").hide();
-    $(".banner-ieha").hide();
-    $(".banner-emea").show();
- }
-} else {
-$(".banner-active").show();
-$(".banner-arcsi").hide();
-$(".banner-issa").hide();
-$(".banner-ieha").hide();
-$(".free_trail_arcsi").hide();
-$(".arcsi_anchor").hide(); 
-$(".arcsi_account").hide();
-
-}
+    $('.advertising-hidden-box').show();
 }
 
-if (membership == "TERMINATED" || membership == "SUSPENDED"){
+$(".close-me").click(function() {
 
-$(".title-main-member-status").css("color","rgb(255, 103, 103)");
-$(".member-key").show();
-$(".banner-issa").show();
+    if ($('.membership-overview-box').css('display') == 'block') {
+        $(".membership-overview-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+
+    if ($('.member-benefits-box').css('display') == 'block') {
+        $(".member-benefits-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if ($('.tradeshows-box').css('display') === 'block') {
+        $(".tradeshows-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if ($('.education-box').css('display') == 'block') {
+        $(".education-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if ($('.advocacy-box').css('display') == 'block') {
+        $(".advocacy-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
+        if ($('.advertising-box').css('display') == 'block') {
+            $(".advertising-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+        }
+    }
+
+    if ($('.issa-tv-box').css('display') == 'block') {
+        $(".issa-tv-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if ($('.issa-divisions-box').css('display') == 'block') {
+        $(".issa-divisions-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+    if ($('.account-settings-box').css('display') == 'block') {
+        $(".account-settings-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
+    }
+
+});
+
+if (membership == "ACTIVE" || membership == "PENDING") {
+
+    $(".title-main-member-status").css("color", "rgb(130, 255, 130)");
+    if (expiringin30 == "EXPIRING") {
+        $(".banner-active").hide();
+        $(".banner-arcsi").hide();
+        $(".banner-issa").show();
+        $(".banner-ieha").hide();
+        if (country != "USA") {
+            $(".banner-active").hide();
+            $(".banner-arcsi").hide();
+            $(".banner-issa").hide();
+            $(".banner-ieha").hide();
+            $(".banner-emea").show();
+        }
+    } else {
+        $(".banner-active").show();
+        $(".banner-arcsi").hide();
+        $(".banner-issa").hide();
+        $(".banner-ieha").hide();
+        $(".free_trail_arcsi").hide();
+        $(".arcsi_anchor").hide();
+        $(".arcsi_account").hide();
+
+    }
+}
+
+if (membership == "TERMINATED" || membership == "SUSPENDED") {
+
+    $(".title-main-member-status").css("color", "rgb(255, 103, 103)");
+    $(".member-key").show();
+    $(".banner-issa").show();
 }
 
 
-if (company_type == "Residential Cleaner"){
-    if (membership == "NONMEMBER"){
+if (company_type == "Residential Cleaner") {
+    if (membership == "NONMEMBER") {
         $(".banner-nonmember").show();
         $(".banner-arcsi").hide();
         $(".banner-issa").hide();
@@ -253,16 +302,16 @@ if (company_type == "Residential Cleaner"){
     } else {
         $(".banner-arcsi").show();
         $(".banner-issa").hide();
-$(".free_trail_arcsi").show();
-$(".arcsi_anchor").show(); 
-$(".issa_anchor").hide(); 
-$(".free_trail").hide();
-$(".arcsi_account").show();
-$(".myissa_account").hide();
+        $(".free_trail_arcsi").show();
+        $(".arcsi_anchor").show();
+        $(".issa_anchor").hide();
+        $(".free_trail").hide();
+        $(".arcsi_account").show();
+        $(".myissa_account").hide();
     }
 }
-if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || subclass == "IEHAGRP" || subclass == "IEHARET"){
-    if (membership == "NONMEMBER"){
+if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || subclass == "IEHAGRP" || subclass == "IEHARET") {
+    if (membership == "NONMEMBER") {
         $(".banner-nonmember").show();
         $(".banner-ieha").hide();
         $(".banner-issa").hide();
@@ -280,8 +329,8 @@ if (gbacweb == "Y") {
         $(".banner-nonmember").hide();
     }
 }
-if (gbacweb != "Y"){
-    if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING" || membership == "NONMEMBER"){
+if (gbacweb != "Y") {
+    if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING" || membership == "NONMEMBER") {
         $(".banner-ieha").hide();
         $(".banner-issa").hide();
         $(".banner-arcsi").hide();
@@ -289,16 +338,18 @@ if (gbacweb != "Y"){
         $(".gbac-not").show();
     }
 }
-if (company_admin!= "Y"){
-    if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING"){
-$(".admin-creds").hide();
+if (company_admin != "Y") {
+    if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING") {
+        $(".admin-creds").hide();
+    }
 }
-}
-if (oli_access !='Y'){
-$("#oli-box").hide()
-};
-function oliDirect(){
-   window.open("https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider", "_blank", "")
+if (oli_access != 'Y') {
+    $("#oli-box").hide()
 };
 
-// ]]></script>
+function oliDirect() {
+    window.open("https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider", "_blank", "")
+};
+
+// ]]>
+</script>
