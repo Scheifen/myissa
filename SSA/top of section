@@ -1,5 +1,5 @@
 <script>
-    ajaxCall('/images/My_Images/ajaxfolder/calculatorEULA.html')
+    setTimeout(ajaxCall('/images/My_Images/ajaxfolder/calculatorEULA.html'), 5000)
 </script>
 <div id="why-not-hide-me" class="center" style="height: 120px;"></div>
 <div class="container">
