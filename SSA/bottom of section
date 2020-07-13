@@ -291,7 +291,12 @@ background-color: white;
 	.banner-emea{
 		display: none;
 	}
-
+	.banner-active{
+		display: none;
+	}
+	.banner-nonmember{
+		display: none;
+	}
 @media only screen and (max-height: 770px){
 .menu-box-benefits{
 		height: 520px;
@@ -315,7 +320,14 @@ vertical-align: middle;
 .issa_anchor:hover,.issa_anchor:focus, .arcsi_anchor:hover,.arcsi_anchor:focus {
     background-color: #0063be;
 }
---></style>
+-->
+.mem-only{
+	text-align:left;
+	font-size:0.5em;
+	float: left;
+	padding-left: 3px;
+}
+</style>
 <script>// <![CDATA[
 var company_member_type = $("#company_type").html();
     var country = $("#country").html();

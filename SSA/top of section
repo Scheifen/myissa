@@ -171,9 +171,9 @@
                                 <h4><a href="https://www.issa.com/issa-tv">ISSAtv</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
-                                <h4><a href="https://gbac.org/">GBAC</a></h4>
+                                <h4><a href="https://gbac.org/">GBAC.org</a></h4>
                             </div>
-                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term gbac-attend">
                                 <h4 style="font-size: 1rem;"><a href="https://online.issa.com/issassa/f?p=700:5">Webinar: How to Clean and Disinfect for the Novel Coronavirus SARS-COV-2</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
@@ -413,10 +413,10 @@
                     <div class="col-sm-12 container-menu-box banner-arcsi expiring-membership expired-membership">
                         <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2-arcsi.jpg" style="height: 153px;" width="100%"></a></div>
                     </div>
-                    <div class="col-sm-12 container-menu-box banner-active" style="display: none;">
+                    <div class="col-sm-12 container-menu-box banner-active">
                         <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
                     </div>
-                    <div class="col-sm-12 container-menu-box banner-nonmember" style="display: none;">
+                    <div class="col-sm-12 container-menu-box banner-nonmember">
                         <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
                     </div>
                     <div class="col-sm-12 container-menu-box specialized-content manufacturer">

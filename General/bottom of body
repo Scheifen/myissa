@@ -162,28 +162,28 @@ if (membership == "ACTIVE" || membership == "PENDING") {
 if (membership == "NONMEMBER") {
     if (country == "USA") {
         if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
-
+            $("banner-nonmember").show();
             $(".expired-membership").show();
             $(".manufacturer-term").show();
             $(".manufacturer:not(.manufacturer-term, .issa-oli) a").removeAttr("href");
             $(".manufacturer:not(.manufacturer-term, .issa-oli)").css("background-color", "#aeb1b4");
 
         } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
-
+            $("banner-nonmember").show();
             $(".distributor-term").show();
             $(".distributor").show();
             $(".distributor:not(.distributor-term, .issa-oli) a").removeAttr("href");
             $(".distributor:not(.distributor-term, .issa-oli)").css("background-color", "#aeb1b4");
 
         } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
-
+            $("banner-nonmember").show();
             $(".manufacture-rep-term").show();
             $(".manufacture-rep:not(.manufacture-rep-term, .issa-oli) a").removeAttr("href");
             $(".manufacture-rep:not(.manufacture-rep-term, .issa-oli)").css("background-color", "#aeb1b4");
 
 
         } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
-
+            $("banner-nonmember").show();
             $(".bsc-isp-term").show();
             $(".isp").show();
             $(".bsc-isp").show();
@@ -192,6 +192,7 @@ if (membership == "NONMEMBER") {
 
 
         } else {
+            $("banner-nonmember").show();
             $(".bsc-isp-term").show();
             $(".other").show();
             $(".bsc-isp").show();
@@ -200,6 +201,7 @@ if (membership == "NONMEMBER") {
 
         }
     } else {
+        $("banner-nonmember").show();
         $(".emea-term").show();
         $(".emea:not(.emea-term, .issa-oli) a").removeAttr("href");
         $(".emea:not(.emea-term, .issa-oli)").css("background-color", "#aeb1b4");
@@ -317,6 +319,7 @@ if (company_type == "Residential Cleaner") {
         $(".myissa_account").hide();
     }
 }
+
 if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || subclass == "IEHAGRP" || subclass == "IEHARET") {
     if (membership == "NONMEMBER") {
         $(".banner-nonmember").show();
@@ -327,35 +330,29 @@ if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || su
         $(".banner-issa").hide();
     }
 }
+
+
+
 if (gbacweb == "Y") {
     if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING" || membership == "NONMEMBER") {
-        $(".banner-ieha").hide();
-        $(".banner-issa").hide();
-        $(".banner-arcsi").hide();
         $(".gbac-attend").show();
-        $(".banner-nonmember").hide();
     }
+} else {
+    $(".gbac-attend").hide();
 }
-if (gbacweb != "Y") {
-    if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING" || membership == "NONMEMBER") {
-        $(".banner-ieha").hide();
-        $(".banner-issa").hide();
-        $(".banner-arcsi").hide();
-        $(".banner-nonmember").hide();
-        $(".gbac-not").show();
-    }
-}
+
 if (company_admin != "Y") {
     if (membership == "ACTIVE" || membership == "SUSPENDED" || membership == "PENDING") {
         $(".admin-creds").hide();
     }
 }
+
 if (oli_access != 'Y') {
     $("#oli-box").hide();
     $(".issa-oli) a").removeAttr("href");
     $(".issa-oli)").css("background-color", "#aeb1b4");
 } else {
-    $(".issa-oli").attr("href","https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider")
+    $(".issa-oli").attr("href", "https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider")
     $(".issa-oli").css("background-color", "##0072bc!important")
 }
 
@@ -363,5 +360,6 @@ function oliDirect() {
     window.open("https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider", "_blank", "");
 }
 
+$("a:not([href])").parent().prepend("<span class='mem-only'>(Members Only)</span>")
 // ]]>
 </script>
