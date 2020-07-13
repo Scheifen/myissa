@@ -93,9 +93,9 @@
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
                                 <h4><a onclick="mustAccept('bidding')">Work Loading Bidding Tool</a></h4>
                             </div>
-                            <!--<div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
                                 <h4><a onclick="mustAccept('metric')">Work Loading and Bidding Tool - Metric</a></h4>
-                            </div>-->
+                            </div>
                             <div class="close-me"></div>
                             <div class="member-key"></div>
                             <i class="fas fa-user icon-styler-inside"></i>
@@ -149,8 +149,8 @@
                     <div class="col-md-12 container-menu-box">
                         <div class="bg-standard  mr-md-1 menu-box-benefits">
                             <div class="spacer-40"></div>
-                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
-                                <h4><a href="https://issa.brainier.com/#/login" target="_blank" rel="noopener">ISSA Online Learning Institute</a> <a href="https://form.jotform.com/200866913744360" target="_blank" rel="noopener" class="free_trail_arcsi">ARCSI Online Learning Institute</a></h4>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea issa-oli">
+                                <h4><a href="https://issa.brainier.com/#/login" target="_blank" rel="noopener">ISSA Online Learning Institute</a> <a href="https://form.jotform.com/200866913744360" target="_blank" rel="noopener" class="arcsi_account">ARCSI Online Learning Institute</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term arcsi_account">
                                 <h4><a href="https://arcsi.org/take-the-hct-training-certification">House Cleaning Technician Training</a></h4>

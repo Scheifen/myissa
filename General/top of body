@@ -1,58 +1,89 @@
-<div id="cookie_monster" style="display: none;"><span id="customer_id"><!--#include object="CUST_ID"--></span> <span id="company_name"><!--#include object="PREF_EMPLOYER"--></span> <span id="company_type"><!--#include object="COMPANY_CLASS"--></span> <span id="user_job"><!--#include object="CUST_TITLE"--></span> <span id="user_name"><!--#include object="CUST_DISPLAY_NM"--></span> <span id="user_email"><!--#include object="PREF_EMAIL"--></span> <span id="employer_id"><!--#include object="PREF_EMPLOYER_ID"--></span><span id="membership_status"><!--#include object="MEMBER_STATUS"--></span><span id="country"><!--#include object="USER_COUNTRY"--></span> <span id="region"><!--#include object="ISSA_CUST_REGION"--></span><span id="expiringin30"><!--#include object="EXPIRING_MEMBR"--></span><span id="attending"><!--#include object="TRADESHOW_ATTENDEE"--></span><span id="subclass"><!--#include object="COMPANY_SUBCLASS"--></span><span id="member_primary_contact"><!--#include object="PRIM_CONTACT"--></span><span id="join_date"><!--#include object="JOIN_DT"--></span><span id="paid_thru_date"><!--#include object="PAID_THRU_DT"--></span><span id="comp_admin"><!--#include object="COMP_ADMIN"--></span><span id="oli_access"><!--#include object="OLI_ACCESS"--></span></div>
-<script>// <![CDATA[
+<div id="cookie_monster" style="display: none;"><span id="customer_id">
+        <!--#include object="CUST_ID"--></span> <span id="company_name">
+        <!--#include object="PREF_EMPLOYER"--></span> <span id="company_type">
+        <!--#include object="COMPANY_CLASS"--></span> <span id="user_job">
+        <!--#include object="CUST_TITLE"--></span> <span id="user_name">
+        <!--#include object="CUST_DISPLAY_NM"--></span> <span id="user_email">
+        <!--#include object="PREF_EMAIL"--></span> <span id="employer_id">
+        <!--#include object="PREF_EMPLOYER_ID"--></span><span id="membership_status">
+        <!--#include object="MEMBER_STATUS"--></span><span id="country">
+        <!--#include object="USER_COUNTRY"--></span> <span id="region">
+        <!--#include object="ISSA_CUST_REGION"--></span><span id="expiringin30">
+        <!--#include object="EXPIRING_MEMBR"--></span><span id="attending">
+        <!--#include object="TRADESHOW_ATTENDEE"--></span><span id="subclass">
+        <!--#include object="COMPANY_SUBCLASS"--></span><span id="member_primary_contact">
+        <!--#include object="PRIM_CONTACT"--></span><span id="join_date">
+        <!--#include object="JOIN_DT"--></span><span id="paid_thru_date">
+        <!--#include object="PAID_THRU_DT"--></span><span id="comp_admin">
+        <!--#include object="COMP_ADMIN"--></span><span id="oli_access">
+        <!--#include object="OLI_ACCESS"--></span></div>
+<script>
+// <![CDATA[
 function setCookie(name, value, days) {
-    var d = new Date; 
+    var d = new Date;
     var domo = window.location.hostname.match(/[^\s.]+\.[^\s.]+$/)[0];
-    d.setTime(d.getTime() + 24*60*60*1000*days);
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
     document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString() + ";domain=" + domo;
 }
- 
+
 var employer_id = document.getElementById("employer_id").innerHTML;
-var customer_id = document.getElementById("customer_id").innerHTML;  
+var customer_id = document.getElementById("customer_id").innerHTML;
 var company_name = document.getElementById("company_name").innerHTML;
 var company_type = document.getElementById("company_type").innerHTML;
 var user_job = document.getElementById("user_job").innerHTML;
 var user_name = document.getElementById("user_name").innerHTML;
 var user_email = document.getElementById("user_email").innerHTML;
 var subclass = document.getElementById("subclass").innerHTML;
-var primary_contact= document.getElementById("member_primary_contact").innerHTML;
-var paid_thru_date= document.getElementById("paid_thru_date").innerHTML;
-var join_date= document.getElementById("join_date").innerHTML;
-var gbacweb= document.getElementById("gbacweb").innerHTML;
-var company_admin= document.getElementById("comp_admin").innerHTML;
-var oli_access= document.getElementById("oli_access").innerHTML;
+var primary_contact = document.getElementById("member_primary_contact").innerHTML;
+var paid_thru_date = document.getElementById("paid_thru_date").innerHTML;
+var join_date = document.getElementById("join_date").innerHTML;
+var gbacweb = document.getElementById("gbacweb").innerHTML;
+var company_admin = document.getElementById("comp_admin").innerHTML;
+var oli_access = document.getElementById("oli_access").innerHTML;
 
-if (company_type == "A"){
-	company_type = "Associate"
-} else if(company_type == "ALLIANCE"){
-	company_type = "Alliance Partner"
-}else if(company_type == "AM"){
-	company_type = "Associate ManufacturingProcess"
-}else if(company_type == "BSC"){
-	company_type = "Building Service Contractor"
-}else if(company_type == "D"){
-	company_type = "Distributor"
-}else if(company_type == "EDU"){
-	company_type = "LMS Online Learning Subscription"
-}else if(company_type == "ISP"){
-	company_type = "In-house Service Provider"
-}else if(company_type == "LT"){
-	company_type = "Lifetime"
-}else if(company_type == "M"){
-	company_type = "Manufacturer"
-}else if(company_type == "RC"){
-	company_type = "Residential Cleaner"
-}else if(company_type == "REP"){
-	company_type = "Manufacturers Representative"
-}else if(company_type == "W"){
-	company_type = "Wholesaler"
+if (company_type == "A") {
+    company_type = "Associate"
+} else if (company_type == "ALLIANCE") {
+    company_type = "Alliance Partner"
+} else if (company_type == "AM") {
+    company_type = "Associate ManufacturingProcess"
+} else if (company_type == "BSC") {
+    company_type = "Building Service Contractor"
+} else if (company_type == "D") {
+    company_type = "Distributor"
+} else if (company_type == "EDU") {
+    company_type = "LMS Online Learning Subscription"
+} else if (company_type == "ISP") {
+    company_type = "In-house Service Provider"
+} else if (company_type == "LT") {
+    company_type = "Lifetime"
+} else if (company_type == "M") {
+    company_type = "Manufacturer"
+} else if (company_type == "RC") {
+    company_type = "Residential Cleaner"
+} else if (company_type == "REP") {
+    company_type = "Manufacturers Representative"
+} else if (company_type == "W") {
+    company_type = "Wholesaler"
 }
-// ]]></script>
+// ]]>
+</script>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5MVJRRW');</script>
-<!-- End Google Tag Manager --> <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MVJRRW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+<script>
+(function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5MVJRRW');
+</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MVJRRW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
