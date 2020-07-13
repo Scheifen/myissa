@@ -16,8 +16,6 @@ $("#membership-overview").click(function() {
     $(".menu-box-container").hide();
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });
-
-
 $("#member-benefits").click(function() {
     $(".member-benefits-box").fadeIn("slow");
     $(".menu-box-container").hide();
@@ -80,31 +78,37 @@ if (membership == "ACTIVE" || membership == "PENDING") {
 
             $(".banner-issa").show();
             $(".manufacturer").show();
+            console.log("active or pending - USA - AM M");
 
         } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
 
             $(".banner-issa").show();
             $(".distributor").show();
+            console.log("active or pending - USA - D W");
 
         } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
 
             $(".banner-issa").show();
             $(".manufacture-rep").show();
+            console.log("active or pending - USA - R A ");
 
         } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
 
             $(".banner-issa").show();
             $(".bsc-isp").show();
             $(".isp").show();
+            console.log("active or pending - USA - BSC ISP or error");
 
         } else {
             $(".banner-issa").show();
             $(".bsc-isp").show();
             $(".other").show();
+            console.log("active or pending - USA - anything else");
         }
     } else {
         $(".banner-issa").show();
         $(".emea").show();
+        console.log("active or pending - international - anything");
     }
 } else if (membership == "TERMINATED" || membership == "SUSPENDED") {
     if (country == "USA") {
@@ -114,6 +118,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             $(".manufacturer-term").show();
             $(".manufacturer:not(.manufacturer-term) a").removeAttr("href");
             $(".manufacturer:not(.manufacturer-term)").css("background-color", "#aeb1b4");
+            console.log("terminated or suspended - USA - M AM");
 
         } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
 
@@ -122,6 +127,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             $(".distributor").show();
             $(".distributor:not(.distributor-term) a").removeAttr("href");
             $(".distributor:not(.distributor-term)").css("background-color", "#aeb1b4");
+            console.log("terminated or suspended - USA - D W");
 
         } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
 
@@ -129,6 +135,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             $(".manufacture-rep-term").show();
             $(".manufacture-rep:not(.manufacture-rep-term) a").removeAttr("href");
             $(".manufacture-rep:not(.manufacture-rep-term)").css("background-color", "#aeb1b4");
+            console.log("terminated or suspended - USA - R A");
 
 
         } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
@@ -139,7 +146,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             $(".bsc-isp").show();
             $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
             $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
-
+            console.log("terminated or suspended - USA - BSC ISP or error");
 
         } else {
             $(".expired-membership").show();
@@ -148,6 +155,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             $(".bsc-isp").show();
             $(".bsc-isp:not(.bsc-isp-term) a").removeAttr("href");
             $(".bsc-isp:not(.bsc-isp-term)").css("background-color", "#aeb1b4");
+            console.log("terminated or suspended - USA - anything else");
 
         }
     } else {
@@ -156,55 +164,68 @@ if (membership == "ACTIVE" || membership == "PENDING") {
         $(".emea-term").show();
         $(".emea:not(.emea-term) a").removeAttr("href");
         $(".emea:not(.emea-term)").css("background-color", "#aeb1b4");
+        console.log("terminated or suspended - international - anything");
     }
 }
 
 if (membership == "NONMEMBER") {
     if (country == "USA") {
         if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
-            $("banner-nonmember").show();
+            $(".banner-nonmember").show();
             $(".expired-membership").show();
             $(".manufacturer-term").show();
             $(".manufacturer:not(.manufacturer-term, .issa-oli) a").removeAttr("href");
             $(".manufacturer:not(.manufacturer-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - USA - M AM");
 
         } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
-            $("banner-nonmember").show();
+            $(".banner-nonmember").show();
             $(".distributor-term").show();
             $(".distributor").show();
             $(".distributor:not(.distributor-term, .issa-oli) a").removeAttr("href");
             $(".distributor:not(.distributor-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - US - D W");
 
         } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
-            $("banner-nonmember").show();
+            $(".banner-nonmember").show();
             $(".manufacture-rep-term").show();
             $(".manufacture-rep:not(.manufacture-rep-term, .issa-oli) a").removeAttr("href");
             $(".manufacture-rep:not(.manufacture-rep-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - US - R A");
 
-
-        } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
-            $("banner-nonmember").show();
+        } else if (company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
+            $(".banner-nonmember").show();
             $(".bsc-isp-term").show();
             $(".isp").show();
             $(".bsc-isp").show();
             $(".bsc-isp:not(.bsc-isp-term, .issa-oli) a").removeAttr("href");
             $(".bsc-isp:not(.bsc-isp-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - US - ISP or failed pull");
 
-
+        } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP") {
+            $(".banner-nonmember").show();
+            $(".bsc-isp-term").show();
+            $(".bsc").show();
+            $(".bsc-isp").show();
+            $(".bsc-isp:not(.bsc-isp-term, .issa-oli) a").removeAttr("href");
+            $(".bsc-isp:not(.bsc-isp-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - US - BSC");
         } else {
-            $("banner-nonmember").show();
+            $(".banner-nonmember").show();
             $(".bsc-isp-term").show();
             $(".other").show();
             $(".bsc-isp").show();
             $(".bsc-isp:not(.bsc-isp-term, .issa-oli) a").removeAttr("href");
             $(".bsc-isp:not(.bsc-isp-term, .issa-oli)").css("background-color", "#aeb1b4");
+            console.log("nonmember - US - Anything Else");
 
         }
     } else {
-        $("banner-nonmember").show();
+        $(".banner-nonmember").show();
         $(".emea-term").show();
         $(".emea:not(.emea-term, .issa-oli) a").removeAttr("href");
         $(".emea:not(.emea-term, .issa-oli)").css("background-color", "#aeb1b4");
+        console.log("nonmember - international - Anything");
     }
 }
 
@@ -306,6 +327,7 @@ if (company_type == "Residential Cleaner") {
         $(".banner-nonmember").show();
         $(".banner-arcsi").hide();
         $(".banner-issa").hide();
+        $(".specialized-content.isp").hide();
 
 
     } else {
@@ -317,6 +339,7 @@ if (company_type == "Residential Cleaner") {
         $(".free_trail").hide();
         $(".arcsi_account").show();
         $(".myissa_account").hide();
+        $(".specialized-content.isp").hide();
     }
 }
 
