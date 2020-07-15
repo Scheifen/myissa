@@ -67,6 +67,7 @@ var expiring_membership = $("#expiringin30").html();
 if (expiring_membership == "EXPIRING" && membership_status != 'NONMEMBER') {
     $(".expiring-membership").show();
 }
+
 if (attending_tradeshow == "NOT_ATTENDING") {
     $(".attending-show").show();
 }
@@ -114,7 +115,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
     if (country == "USA") {
         if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
 
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".manufacturer-term").show();
             $(".manufacturer:not(.manufacturer-term) a").removeAttr("href");
             $(".manufacturer:not(.manufacturer-term)").css("background-color", "#aeb1b4");
@@ -122,7 +123,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
 
         } else if (company_member_type == "D" || company_member_type == "DB" || company_member_type == "DB-COMP" || company_member_type == "W" || company_member_type == "WB" || company_member_type == "WB-COMP") {
 
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".distributor-term").show();
             $(".distributor").show();
             $(".distributor:not(.distributor-term) a").removeAttr("href");
@@ -131,7 +132,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
 
         } else if (company_member_type == "R" || company_member_type == "RB" || company_member_type == "RB-COMP" || company_member_type == "A" || company_member_type == "AB" || company_member_type == "AB-COMP" || company_member_type == "AP" || company_member_type == "APB" || company_member_type == "AT") {
 
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".manufacture-rep-term").show();
             $(".manufacture-rep:not(.manufacture-rep-term) a").removeAttr("href");
             $(".manufacture-rep:not(.manufacture-rep-term)").css("background-color", "#aeb1b4");
@@ -140,7 +141,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
 
         } else if (company_member_type == "BSC" || company_member_type == "BSCB" || company_member_type == "BSCB-COMP" || company_member_type == "ISP" || company_member_type == "ISPB" || company_member_type == "ISPB-COMP" || company_member_type == "RC" || company_member_type.includes("<!--")) {
 
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".bsc-isp-term").show();
             $(".isp").show();
             $(".bsc-isp").show();
@@ -149,7 +150,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
             console.log("terminated or suspended - USA - BSC ISP or error");
 
         } else {
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".bsc-isp-term").show();
             $(".other").show();
             $(".bsc-isp").show();
@@ -160,7 +161,7 @@ if (membership == "ACTIVE" || membership == "PENDING") {
         }
     } else {
 
-        $(".expired-membership").show();
+        $(".expiring-membership").show();
         $(".emea-term").show();
         $(".emea:not(.emea-term) a").removeAttr("href");
         $(".emea:not(.emea-term)").css("background-color", "#aeb1b4");
@@ -172,7 +173,7 @@ if (membership == "NONMEMBER") {
     if (country == "USA") {
         if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
             $(".banner-nonmember").show();
-            $(".expired-membership").show();
+            $(".expiring-membership").show();
             $(".manufacturer-term").show();
             $(".manufacturer:not(.manufacturer-term, .issa-oli) a").removeAttr("href");
             $(".manufacturer:not(.manufacturer-term, .issa-oli)").css("background-color", "#aeb1b4");
@@ -284,7 +285,6 @@ $(".close-me").click(function() {
     if ($('.account-settings-box').css('display') == 'block') {
         $(".account-settings-box").animate({ height: 'hide' }).promise().done(function() { $(".menu-box-container").fadeIn("slow"); });
     }
-
 });
 
 if (membership == "ACTIVE" || membership == "PENDING") {
@@ -328,8 +328,6 @@ if (company_type == "Residential Cleaner") {
         $(".banner-arcsi").hide();
         $(".banner-issa").hide();
         $(".specialized-content.isp").hide();
-
-
     } else {
         $(".banner-arcsi").show();
         $(".banner-issa").hide();
@@ -341,6 +339,8 @@ if (company_type == "Residential Cleaner") {
         $(".myissa_account").hide();
         $(".specialized-content.isp").hide();
     }
+} else {
+    $("banner-arcsi").hide();
 }
 
 if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || subclass == "IEHAGRP" || subclass == "IEHARET") {
@@ -352,6 +352,8 @@ if (subclass == "IEHA" || subclass == "IEHACHAP" || subclass == "IEHAFRON" || su
         $(".banner-ieha").show();
         $(".banner-issa").hide();
     }
+} else {
+    $(".banner-ieha").hide();
 }
 
 
@@ -383,6 +385,9 @@ function oliDirect() {
     window.open("https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider", "_blank", "");
 }
 
-$("a:not([href])").parent().prepend("<span class='mem-only'>(Members Only)</span>")
+if(membership == "NONMEMBER" || membership == "TERMINATED" || membership == "SUSPENDED"){
+    $("a:not([href])").parent().prepend("<span class='mem-only'>(Members Only)</span>")
+}
+
 // ]]>
 </script>
