@@ -328,6 +328,17 @@ if (company_type == "Residential Cleaner") {
         $(".banner-arcsi").hide();
         $(".banner-issa").hide();
         $(".specialized-content.isp").hide();
+        $(".expiring-membership").hide();
+    } else if (expiring_membership == "EXPIRING") {
+        $(".banner-arcsi").show();
+        $(".banner-issa").hide();
+        $(".free_trail_arcsi").show();
+        $(".arcsi_anchor").show();
+        $(".issa_anchor").hide();
+        $(".free_trail").hide();
+        $(".arcsi_account").show();
+        $(".myissa_account").hide();
+        $(".specialized-content.isp").hide();
     } else {
         $(".banner-arcsi").show();
         $(".banner-issa").hide();
@@ -338,6 +349,7 @@ if (company_type == "Residential Cleaner") {
         $(".arcsi_account").show();
         $(".myissa_account").hide();
         $(".specialized-content.isp").hide();
+        $(".expiring-membership").hide();
     }
 } else {
     $("banner-arcsi").hide();
@@ -385,7 +397,7 @@ function oliDirect() {
     window.open("https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider", "_blank", "");
 }
 
-if(membership == "NONMEMBER" || membership == "TERMINATED" || membership == "SUSPENDED"){
+if (membership == "NONMEMBER" || membership == "TERMINATED" || membership == "SUSPENDED") {
     $("a:not([href])").parent().prepend("<span class='mem-only'>(Members Only)</span>")
 }
 

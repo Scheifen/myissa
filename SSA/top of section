@@ -76,7 +76,8 @@
                                 <h4><a href="https://www.issa.com/member-benefits/business-resources/discount-services">Member Employee Benefits Program</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
-                                <h4><a href="https://www.issa.com/member-mailing-list" class="myissa_account">Member Mailing List</a><a href="https://www.issa.com/member-benefits/business-resources/issa-workloading-bidding-tool" class="arcsi_account">Business Calculator</a></h4>
+                                <h4><a href="https://www.issa.com/member-mailing-list" class="myissa_account">Member Mailing List</a>
+                                    <a onclick="mustAccept('bidding')" class="arcsi_account">Work Loading and Bidding Tool</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/member-benefits/business-resources/promote-your-professionalism" class="myissa_account">Promotional Toolkit</a><a href="https://www.issa.com/member-benefits/refer-a-friend" class="arcsi_account">Referral Program</a></h4>
