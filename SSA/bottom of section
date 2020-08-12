@@ -406,14 +406,6 @@ setCookie("user_email",user_email,30)
 }
 
 
-
-var cookie_val = getCookie("previousPage");
-if (cookie_val != null && cookie_val != ''){
-document.cookie = "previousPage= ; expires = Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=issa.com;";
-window.location.href = cookie_val;
-}
-
-
 var xmlhttp = new XMLHttpRequest();
         var xmlhttp2 = new XMLHttpRequest();
 
