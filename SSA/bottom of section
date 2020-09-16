@@ -345,8 +345,7 @@ $(".title-main-member-status").append(" " +membership);
 $("#aaSTDDashboardStoredDocTen").remove();
 $(".header").css("z-index","1000");
 $("#aaSTDDashboardStoredDocNine").remove();
-// ]]></script>
-<script>// <![CDATA[
+
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);

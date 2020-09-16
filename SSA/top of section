@@ -95,7 +95,7 @@
                                 <h4><a onclick="mustAccept('bidding')">Work Loading Bidding Tool</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
-                                <h4><a onclick="mustAccept('metric')">Work Loading and Bidding Tool - Metric</a></h4>
+                                <h4><a onclick="mustAccept('metric')">Work Loading and Bidding Tool 2.0 w/Frequency & Metric</a></h4>
                             </div>
                             <div class="close-me"></div>
                             <div class="member-key"></div>
@@ -174,8 +174,8 @@
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
                                 <h4><a href="https://gbac.org/">GBAC.org</a></h4>
                             </div>
-                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term gbac-attend">
-                                <h4 style="font-size: 1rem;"><a href="https://online.issa.com/issassa/f?p=700:5">Webinar: How to Clean and Disinfect for the Novel Coronavirus SARS-COV-2</a></h4>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
+                                <h4><a href="https://online.issa.com/issassa/f?p=700:6">myWebinars</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/certification-standards/issa-clean-standards">ISSA Clean Standards</a></h4>

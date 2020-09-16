@@ -250,6 +250,7 @@ if (company_member_type == "ISP" || company_member_type == "ISPB" || company_mem
 
 if (company_member_type == "M" || company_member_type == "MB" || company_member_type == "MB-COMP" || company_member_type == "AM" || company_member_type == "AMB" || company_member_type == "AMB-COMP") {
     $('.advertising-hidden-box').show();
+    $('.advertising-box .list-items').show();
 }
 
 $(".close-me").click(function() {
@@ -386,8 +387,8 @@ if (company_admin != "Y") {
 
 if (oli_access != 'Y') {
     $("#oli-box").hide();
-    $(".issa-oli) a").removeAttr("href");
-    $(".issa-oli)").css("background-color", "#aeb1b4");
+    $(".issa-oli a").removeAttr("href");
+    $(".issa-oli").css("background-color", "#aeb1b4");
 } else {
     $(".issa-oli").attr("href", "https://login.issa.com/account/CheckUsername?returnUrl=%2Fsaml%2FInitiateSso%3FpartnerName%3DElanServiceProvider")
     $(".issa-oli").css("background-color", "##0072bc!important")
