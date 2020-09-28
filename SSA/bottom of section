@@ -196,7 +196,7 @@ background-color: white;
 	}
 
 	.menu-box-benefits{
-		height: 703px;
+		height: 710px;
 	}
 	.close-me{
 		content:url(https://go.issa.com/repository/myISSA/close.png);
@@ -299,10 +299,10 @@ background-color: white;
 	}
 @media only screen and (max-height: 770px){
 .menu-box-benefits{
-		height: 520px;
+		height: 710px;
 	}
 .issa-tv-box .menu-box-benefits{
-		height: 700px;
+		height: 710px;
 	}
 }
 span.issa_anchor, span.arcsi_anchor{
