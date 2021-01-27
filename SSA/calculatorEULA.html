@@ -6,20 +6,12 @@ function mustAccept(button) {
         if (button == 'consume') {
             $("#acceptEula").attr("onclick", "eulaAccepted();mustAccept('consume');")
         }
-        if (button == 'bidding') {
-            alert("This calculator has been replaced by the Work Loading and Bidding Tool 2.0 w/Frequency & Metric. We encourage you to use the new 2.0 version, as the old version will soon be deactivated.")
-            $("#acceptEula").attr("onclick", "eulaAccepted();mustAccept('bidding');")
-        }
         if (button == 'metric') {
             $("#acceptEula").attr("onclick", "eulaAccepted();mustAccept('metric');")
         }
     } else {
         if (button == 'consume') {
             window.open("https://calculators.issa.com/account/ISSACalCulator/1", "_blank")
-        }
-        if (button == 'bidding') {
-            alert("This calculator has been replaced by the Work Loading and Bidding Tool 2.0 w/Frequency & Metric. We encourage you to use the new 2.0 version, as this version will be deactivated on Dec 31, 2020")
-            window.open("https://calculators.issa.com/account/ISSACalCulator/0", "_blank")
         }
         if (button == 'metric') {
             window.open("https://calculatorsmetric.issa.com/MetricAPI/Account/ISSACalculator/0", "_blank")
