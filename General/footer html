@@ -140,4 +140,10 @@ function rmCBEinv2() {
 
 $(window).load(rmCBEinv2());
 $(window).load(courseCheckout());
+
+function RedirectToPrevious(){
+    var exp = new Date(new Date().setMinutes(new Date().getMinutes()+10)).toUTCString()
+    var x = window.location.href
+    document.cookie = "previousPage="+ x +"; expires= " + exp + "; path=/ ; domain=issa.com" 
+};
 </script>

@@ -53,6 +53,16 @@
     	top:70px;
     	font-size: 16px;
 	}
+	.mType{
+	vertical-align: bottom;
+    	position: absolute;
+    	color: white;
+    	padding: 7px 15px;
+    	margin-bottom: auto;
+    	// margin-left: 160px;
+    	top:70px;
+    	font-size: 16px;
+	}
 	.title-main-member-status{
 		vertical-align: bottom;
     	position: absolute;
@@ -196,7 +206,7 @@ background-color: white;
 	}
 
 	.menu-box-benefits{
-		height: 710px;
+		height: 720px;
 	}
 	.close-me{
 		content:url(https://go.issa.com/repository/myISSA/close.png);
@@ -342,6 +352,7 @@ $(".title-main-company-name").append(" " +company_name);
 // $(".title-main-user-id").append(" " +customer_id);
 $(".title-main-company-id").append(" " +employer_id);
 $(".title-main-member-status").append(" " +membership);
+$(".mType").append(" "+tier_chk);
 $("#aaSTDDashboardStoredDocTen").remove();
 $(".header").css("z-index","1000");
 $("#aaSTDDashboardStoredDocNine").remove();
@@ -404,6 +415,26 @@ setCookie("user_email",user_email,30)
 	setCookie("user_email","null",30)
 }
 
+if(tier_chk == "LEGACY"){
+	$(".mType").hide();
+}
+
+$(document).ready(function(){
+if (primary_contact == null || primary_contact.includes("<!") == true) {
+	$(".primary-contact").parent().hide()
+}
+if (join_date == null || join_date.includes("<!") == true) {
+	$(".join_date").parent().hide()
+}
+if (paid_thru_date == null || paid_thru_date.includes("<!") == true) {
+	$(".paid_thru_date").parent().hide()
+}})
+
+var cookie_val = getCookie("previousPage");
+if (cookie_val != null && cookie_val != ''){
+document.cookie = "previousPage= ; expires = Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=issa.com;";
+window.location.href = cookie_val;
+}
 
 var xmlhttp = new XMLHttpRequest();
         var xmlhttp2 = new XMLHttpRequest();

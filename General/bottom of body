@@ -234,6 +234,7 @@ if (company_member_type == "RC") {
     $(".arcsi_account").show();
 } else {
     $(".arcsi_account").hide();
+    $(".banner-arcsi").hide();
 }
 
 
@@ -315,7 +316,15 @@ if (membership == "ACTIVE" || membership == "PENDING") {
     }
 }
 
-if (membership == "TERMINATED" || membership == "SUSPENDED") {
+if(membership == "ACTIVE" || membership == "PENDING" || membership == "SUSPENDED") {
+    if (country == "CAN"){
+        $(".benefits-can").show();
+    }
+} else {
+    $(".benefits-can").hide();
+}
+
+if (membership == "TERMINATED" || membership == "SUSPENDED" || company_type != "Residential Cleaner" || company_member_type != "RC") {
 
     $(".title-main-member-status").css("color", "rgb(255, 103, 103)");
     $(".member-key").show();
@@ -323,7 +332,7 @@ if (membership == "TERMINATED" || membership == "SUSPENDED") {
 }
 
 
-if (company_type == "Residential Cleaner") {
+if (company_type == "Residential Cleaner" || company_member_type == "RC") {
     if (membership == "NONMEMBER") {
         $(".banner-nonmember").show();
         $(".banner-arcsi").hide();
@@ -340,6 +349,7 @@ if (company_type == "Residential Cleaner") {
         $(".arcsi_account").show();
         $(".myissa_account").hide();
         $(".specialized-content.isp").hide();
+        $(".expire-issa").hide()
     } else {
         $(".banner-arcsi").show();
         $(".banner-issa").hide();

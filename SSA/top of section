@@ -1,5 +1,5 @@
 <script>
-    setTimeout(ajaxCall('/images/My_Images/ajaxfolder/calculatorEULA.html'), 5000)
+    ajaxCall("https://online.issa.com/images/My_Images/ajaxfolder/calculatorEULA.html")
 </script>
 <div id="why-not-hide-me" class="center" style="height: 120px;"></div>
 <div class="container">
@@ -24,10 +24,10 @@
                                 <h4><a href="https://www.issa.com/about-issa/contact-issa" class="myissa_account">ISSA Staff Contact</a><a href="https://arcsi.org/2020/01/16/meet-the-arcsi-staff-team" class="arcsi_account">ARCSI Staff Contact</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
-                                <h4><a href="https://online.issa.com/issassa/arssacustacct.summary">All Invoices</a></h4>
+                                <h4><a href="https://online.issa.com/issassa/arssacustacct.summary">My Orders</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
-                                <h4><a href="https://online.issa.com/issassa/arssainvpay.pay_page">Pay Open Invoices</a></h4>
+                                <h4><a href="https://online.issa.com/issassa/arssainvpay.pay_page">Pay Membership Dues</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
                                 <h4><a href="https://www.issa.com/about-issa/contact-issa" class="arcsi_account">Contact ISSA</a></h4>
@@ -44,7 +44,7 @@
                             <div class="close-me"></div>
                             <div class="member-key"></div>
                             <i class="fas fa-book-reader icon-styler-inside"></i>
-                            <p class="title-main">Membership Overview</p>
+                            <p class="title-main">Membership Dues</p>
                         </div>
                     </div>
                 </div>
@@ -54,6 +54,9 @@
                     <div class="col-md-12 container-menu-box">
                         <div class="bg-standard  mr-md-1 menu-box-benefits">
                             <div class="spacer-40"></div>
+                            <div class="list-items benefits-can">
+                                <h4><a href="https://online.issa.com/issassa/f?p=700:10">Canada Exclusive Discount Programs</a></h4>
+                            </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/dir/person">Member Directory</a></h4>
                             </div>
@@ -66,6 +69,12 @@
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
                                 <h4><a href="https://www.issa.com/member-benefits/value-of-clean" class="myissa_account">The Value of Clean</a><a href="https://www.issa.com/member-benefits/arcsi/resources/alison-palmer-member-resource-library" class="arcsi_account">Alison Palmer Member Resource Library</a></h4>
                             </div>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
+                                <h4><a href="https://www.issa.com/member-benefits/value-of-clean/value-of-clean-calculator" class="myissa_account">Value of Clean - Calculator</a></h4>
+                            </div>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
+                                <h4><a href="https://www.issa.com/member-benefits/value-of-clean/value-of-clean-presentation" class="myissa_account">Value of Clean &mdash; Presentation</a></h4>
+                            </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/member-benefits/issa-subject-matter-experts" class="myissa_account">ISSA Subject Matter Experts</a><a href="https://www.issa.com/media/publications-enewsletters" class="arcsi_account">Publications</a></h4>
                             </div>
@@ -73,10 +82,7 @@
                                 <h4><a href="https://www.issa.com/member-benefits/business-resources/discount-programs" class="myissa_account">Affinity Partner Program</a><a href="https://www.issa.com/events/category/arcsi-event" class="arcsi_account">Webinars</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
-                                <h4><a href="https://www.issa.com/member-benefits/business-resources/discount-services">Member Employee Benefits Program</a></h4>
-                            </div>
-                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
-                                <h4><a href="https://www.issa.com/member-mailing-list" class="myissa_account">Member Mailing List</a></h4>
+                                <h4><a href="https://mdp.issa.com">Discount Programs</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/member-benefits/business-resources/promote-your-professionalism" class="myissa_account">Promotional Toolkit</a><a href="https://www.issa.com/member-benefits/refer-a-friend" class="arcsi_account">Referral Program</a></h4>
@@ -90,8 +96,11 @@
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
                                 <h4><a onclick="mustAccept('consume')">Consumables Calculator</a></h4>
                             </div>
+                            <div class="list-items arcsi_account">
+                                <h4><a onclick="mustAccept('consume')">Consumables Calculator</a></h4>
+                            </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea myissa_account">
-                                <h4><a onclick="mustAccept('metric')">Work Loading and Bidding Tool 2.0 w/Frequency & Metric</a></h4>
+                                <h4><a onclick="mustAccept('metric')" style="font-size: 0.8em;">Workloading and Bidding Tool 2.0 w/ Frequency &amp; Metric </a></h4>
                             </div>
                             <div class="close-me"></div>
                             <div class="member-key"></div>
@@ -122,7 +131,10 @@
                                 <h4><a href="https://www.issa.com/trade-shows">Trade Shows</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
-                                <h4><a href="https://www.issa.com/events/category/webinar">Webinars</a></h4>
+                                <h4><a href="https://www.issa.com/events/category/webinar">Future Webinars</a></h4>
+                            </div>
+                            <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea manufacturer-term distributor-term manufacture-rep-term bsc-isp-term emea-term">
+                                <h4><a href="https://online.issa.com/issassa/f?p=700:6">myWebinars</a></h4>
                             </div>
                             <div class="list-items manufacturer distributor manufacture-rep bsc-isp emea">
                                 <h4><a href="https://www.issa.com/events/category/social-event">Member Networking</a></h4>
@@ -334,7 +346,7 @@
                 <div class="row" style="text-align: center;">
                     <div class="col-md-6 container-menu-box">
                         <div id="membership-overview" class="bg-standard bg-menu mr-md-1 menu-box"><i class="fas fa-book-reader icon-styler"></i>
-                            <p class="title-main">Membership Overview</p>
+                            <p class="title-main">Membership Dues</p>
                         </div>
                     </div>
                     <div class="col-md-6 container-menu-box">
@@ -378,14 +390,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="oli-box">
-                    <div class="col-md container-menu-box" style="width: 100%;">
-                        <div class="bg-standard bg-menu mr-md-1 menu-box" onclick="oliDirect()">
-                            <p class="title-main">ISSA Online Learning Institute</p>
-                            <i class="fas fa-certificate icon-styler" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="col-md-6">
                 <div class="row" style="text-align: center;">
@@ -394,60 +398,37 @@
                             <p class="title-main-account-name">Welcome:</p>
                             <p class="title-main-company-name">Company:</p>
                             <p class="title-main-company-id">Company/Member ID:</p>
+                            <p class="mType" style="float: right; position: relative;">Member Type:</p>
                             <p class="title-main-member-status"><span style="color: white;">Member Status:</span></p>
                             <p class="my-profile-small"><a style="color: white; font-size: 15px; text-decoration: underline;" href="https://online.issa.com/issassa/censsaindprofile.display_profile?p_profile_ty=INDIVIDUAL_PROFILE">myProfile</a></p>
                         </div>
                     </div>
-                    <div class="col-sm-12 container-menu-box expire-issa expiring-membership expired-membership">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2.jpg" style="height: 153px;" width="100%"></a></div>
+                    <div id="oli-box" class="col-sm-12">
+                        <div class="col-md container-menu-box" style="width: 100%; padding:0px;">
+                            <div class="bg-standard bg-menu mr-md-1 menu-box" onclick="oliDirect()">
+                                <p class="title-main">ISSA Online Learning Institute</p>
+                                <i class="fas fa-certificate icon-styler" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-12 container-menu-box banner-emea">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/f?p=700:4" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/11/issa-invoice.jpg" style="height: 153px;" width="100%"></a></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box banner-ieha expired-membership expiring-membership">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2-ieha.jpg" style="height: 153px;" width="100%"></a></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box banner-arcsi expiring-membership expired-membership">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2-arcsi.jpg" style="height: 153px;" width="100%"></a></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box banner-active">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box banner-nonmember">
-                        <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content manufacturer">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content distributor">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/iR5gHB_Ln4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content manufacture-rep">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content emea">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content manufacturer-term">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content distributor-term">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/iR5gHB_Ln4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content manufacture-rep-term">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content bsc">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/vJlRnu9ChbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content isp">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/HLk-fP7qjeg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content other">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
-                    </div>
-                    <div class="col-sm-12 container-menu-box specialized-content emea-term">
-                        <div class="bg-standard mr-md-1 menu-box-specialized"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/en8H0apgmuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" div=""></iframe></div>
+                        <div class="col-sm-12 container-menu-box expire-issa expiring-membership expired-membership">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2.jpg" style="height: 153px;" width="100%"></a></div>
+                        </div>
+                        <div class="col-sm-12 container-menu-box banner-emea">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/f?p=700:4" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/11/issa-invoice.jpg" style="height: 153px;" width="100%"></a></div>
+                        </div>
+                        <div class="col-sm-12 container-menu-box banner-ieha expired-membership expiring-membership">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2-ieha.jpg" style="height: 153px;" width="100%"></a></div>
+                        </div>
+                        <div class="col-sm-12 container-menu-box banner-arcsi expiring-membership expired-membership">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://online.issa.com/issassa/arssainvpay.pay_page" target="_blank" rel="noopener"><img src="https://go.issa.com/wp-content/uploads/2019/10/Issa-renew-membersip-banner2-arcsi.jpg" style="height: 153px;" width="100%"></a></div>
+                        </div>
+                        <div class="col-sm-12 container-menu-box banner-active">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
+                        </div>
+                        <div class="col-sm-12 container-menu-box banner-nonmember">
+                            <div class="bg-standard mr-md-1 menu-box-banner"><a href="https://www.issa.com/gbac-fundamentals" target="_blank" rel="noopener"><img src="/images/My_Images/GBAC Banners/GBAC WEB 629x154.png" style="height: 153px;" width="100%"></a></div>
+                        </div>
                     </div>
                 </div>
             </div>

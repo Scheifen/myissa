@@ -16,7 +16,8 @@
         <!--#include object="JOIN_DT"--></span><span id="paid_thru_date">
         <!--#include object="PAID_THRU_DT"--></span><span id="comp_admin">
         <!--#include object="COMP_ADMIN"--></span><span id="oli_access">
-        <!--#include object="OLI_ACCESS"--></span></div>
+        <!--#include object="OLI_ACCESS"--></span><span id="tier_chk">
+        <!--#include object="TIER_CHK"--></span></div>
 <script>
 // <![CDATA[
 function setCookie(name, value, days) {
@@ -40,6 +41,7 @@ var join_date = document.getElementById("join_date").innerHTML;
 var gbacweb = document.getElementById("gbacweb").innerHTML;
 var company_admin = document.getElementById("comp_admin").innerHTML;
 var oli_access = document.getElementById("oli_access").innerHTML;
+var tier_chk = document.getElementById("tier_chk").innerHTML;
 
 if (company_type == "A") {
     company_type = "Associate"

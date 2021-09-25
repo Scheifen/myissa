@@ -130,3 +130,6 @@ z-index:2 !important;
 #ecssaContainer .header-blue{
     font-size: 22px;
 }
+#aaEVTAuthenticationDIV > div.t-Region-bodyWrap > div.t-Region-body > div.container > div{
+height:auto !important;
+}
